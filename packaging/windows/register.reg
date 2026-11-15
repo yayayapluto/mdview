@@ -1,0 +1,34 @@
+Windows Registry Editor Version 5.00
+
+; EDIT the executable path below before importing this file.
+; Replace C:\path\to\mdview.exe with the absolute path to mdview.exe.
+; Double-click this file, or run: reg import register.reg
+
+[HKEY_CURRENT_USER\Software\Classes\Applications\mdview.exe]
+@="MD Viewer"
+"FriendlyAppName"="MD Viewer"
+
+[HKEY_CURRENT_USER\Software\Classes\Applications\mdview.exe\DefaultIcon]
+@="\"C:\\path\\to\\mdview.exe\",0"
+
+[HKEY_CURRENT_USER\Software\Classes\Applications\mdview.exe\SupportedTypes]
+".md"=""
+".markdown"=""
+
+[HKEY_CURRENT_USER\Software\Classes\Applications\mdview.exe\shell\open\command]
+@="\"C:\\path\\to\\mdview.exe\" \"%1\""
+
+[HKEY_CURRENT_USER\Software\Classes\.md\OpenWithProgids]
+"MDViewer.md"=hex(0):
+
+[HKEY_CURRENT_USER\Software\Classes\.markdown\OpenWithProgids]
+"MDViewer.md"=hex(0):
+
+[HKEY_CURRENT_USER\Software\Classes\MDViewer.md]
+@="MD Viewer"
+
+[HKEY_CURRENT_USER\Software\Classes\MDViewer.md\DefaultIcon]
+@="\"C:\\path\\to\\mdview.exe\",0"
+
+[HKEY_CURRENT_USER\Software\Classes\MDViewer.md\shell\open\command]
+@="\"C:\\path\\to\\mdview.exe\" \"%1\""
