@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=MD Viewer
+Exec=mdview %f
+Type=Application
+Categories=Utility;TextEditor;
+MimeType=text/markdown;text/x-markdown;
+NoDisplay=false

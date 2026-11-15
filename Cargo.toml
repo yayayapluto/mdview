@@ -1,0 +1,31 @@
+[package]
+name = "mdview"
+version = "0.1.0"
+edition = "2021"
+description = "Simple desktop Markdown viewer"
+license = "MIT"
+
+[dependencies]
+anyhow = "1"
+eframe = "0.37"
+egui_commonmark = { version = "0.26", features = ["better_syntax_highlighting"] }
+rfd = "0.18"
+notify = "8"
+image = { version = "0.25", default-features = false, features = ["png", "jpeg", "gif"] }
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = true
+
+[package.metadata.bundle]
+name = "MD Viewer"
+identifier = "dev.mdview.app"
+version = "0.1.0"
+icon = []
+short_description = "Markdown viewer"
+category = "public.app-category.utilities"
+
+[package.metadata.bundle.osx]
+minimum_system_version = "10.14"
+info_plist_exts = ["packaging/macos/Info.plist.ext"]
